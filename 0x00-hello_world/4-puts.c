@@ -2,10 +2,10 @@
 
 /**
  * main - main block
- * Return:zero if no erros, return non-zero if errors
+ * Return: 0
  */
 int main(void)
 {
-	puts)"\"Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
