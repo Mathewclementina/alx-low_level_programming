@@ -1,8 +1,7 @@
 #include <studio.h>
 
 /**
- * main - print the string in the put function
- * 
+ * main - main block
  * Return:zero if no erros, return non-zero if errors
  */
 int main(void)
