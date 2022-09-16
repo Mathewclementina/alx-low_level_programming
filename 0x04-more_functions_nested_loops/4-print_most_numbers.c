@@ -1,8 +1,7 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * void print_most_numbers -> print numbers except 2 and 4
+ * print_most_numbers -> print numbers except 2 and 4
  * Return: 0
  */
 void print_most_numbers(void)
@@ -11,12 +10,12 @@ void print_most_numbers(void)
 
 	for (i = 48; i < 58; i++)
 	{
-		if ((i == 50) || (i == 52))
+		if ((i != 50) || (i != 52))
 		{
-			continue;
+			_putchar(i);
 		}
-		_putchar(i);
 	}
-	_putchar(10);
+	_putchar('\n');
 }
+
 
