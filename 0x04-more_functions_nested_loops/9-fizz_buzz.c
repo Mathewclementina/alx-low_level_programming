@@ -23,7 +23,7 @@ int main(void)
 			else
 				if (i % 3 == 0 && i % 5 == 0)
 				{
-					pintf("FizzBuzz");
+					printf("FizzBuzz");
 				}
 				else
 					if (i == 1)
