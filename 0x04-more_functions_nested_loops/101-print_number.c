@@ -8,16 +8,16 @@
 
 void print_number(int n)
 {
-	unsigned int value = n;
+	int n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		value = -value;
+		n = -n;
 	}
-	if (value > 9)
+	if (n > 9)
 	{
-		printf_number(value / 10);
+		printf_number(n / 10);
 	}
-	_putchar(value % 10 + '-');
+	_putchar(n % 10 + '0');
 }
