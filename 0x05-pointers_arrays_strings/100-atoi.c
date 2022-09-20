@@ -10,7 +10,7 @@ int _atoi(char *s)
 {
 	int a = 1;
 	unsigned int ni = 0;
-	char *temp = `s;
+	char *temp = s;
 
 
 	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
@@ -23,7 +23,7 @@ int _atoi(char *s)
 	{
 		do {
 			ni = ni * 10 + (*temp - '0');
-			temp++
+			temp++;
 		}
 	while (*temp >= '0' && *temp <= '9');
 	}
