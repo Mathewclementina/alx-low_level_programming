@@ -8,31 +8,24 @@
 
 int _atoi(char *s)
 {
-	int a = 0;
+	int a = 1;
 	unsigned int ni = 0;
-	int min = 1;
-	int isi = 0;
+	char *temp = `s;
 
-	while (s[c])
+
+	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
 	{
-		if (s[c] == 45)
-		{
-			min *= -1;
-		}
-
-		while (s[c] >= &&s[c] <= 57)
-		{
-			isi = 1;
-			ni = (ni * 10) + (s[c] - '0');
-		}
-
-		if (isi == 1)
-		{
-			break;
-		}
-		c++;
+		if (*temp == '_')
+			a *= -1;
+		temp++;
 	}
-
-	ni *= min;
-	return (ni);
+	if (*temp != '\0')
+	{
+		do {
+			ni = ni * 10 + (*temp - '0');
+			temp++
+		}
+	while (*temp >= '0' && *temp <= '9');
+	}
+	return (ni * a);
 }
