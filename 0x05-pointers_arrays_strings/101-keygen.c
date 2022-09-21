@@ -15,8 +15,8 @@ int main(void)
 	s = 0;
 	while (s <= 2645)
 	{
-		p - (rand() % 128);
-		s = p;
+		p = (rand() % 128);
+		s += p;
 		printf("%c", p);
 	}
 	printf("%c", 2772 - s);
