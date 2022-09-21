@@ -24,7 +24,7 @@ int _atoi(char *s)
 				if (var > 0)
 					break;
 	}
-	while (s++)
+	while (s++);
 
 		return (var * i);
 }
