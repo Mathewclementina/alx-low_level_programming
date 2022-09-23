@@ -12,29 +12,36 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int l = 0, diff = 0;
+	int l = 0, d = 0, g = 0, o = 0, z;
 
-	while (1)
+	while (s1[l])
 	{
-		if (s1[l] == '\0' && s2[l] == '\0')
-			break;
-		else if (s1[l] == '\0')
+		l++;
+	}
+	while (s2[d])
+	{
+		 d++;
+	}
+	if (l <= d)
+	{
+		 z = l;
+	}
+	else
+	{
+		z = d;
+	}
+	while (g <= z)
+	{
+		if (s1[g] == s2[g])
 		{
-			diff = s2[l];
-			break;
-		}
-		else if (s2[l] == '\0')
-		{
-			diff = s1[l]
-				bresk;
-		}
-		else if (s1[l] != s2[l])
-		{
-			diff = s1[l] - s2[l];
-			break;
+			g++;
+			continue;
 		}
 		else
-			l++;
+		{
+			o = s1[g] - s2[g];
+			break;
+		}
+		g++;
 	}
-	return (diff);
 }
