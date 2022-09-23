@@ -5,43 +5,37 @@
  * @s1: first string
  * @s2: second string
  * Return:
- *                returns zero if s1 == s2
- *                returns negative number if s1 < s2
- *                returns positive number if s1 > s2
- */
+ * *		returns zero if s1 == s2
+*		returns negative number if s1 < s2
+*		returns positive number if s1 > s2
+*/
 
 int _strcmp(char *s1, char *s2)
 {
-	int l = 0, d = 0, g = 0, o = 0, z;
+	int i = 0, diff = 0;
 
-	while (s1[l])
+	while (1)
 	{
-		l++;
-	}
-	while (s2[d])
-	{
-		 d++;
-	}
-	if (l <= d)
-	{
-		 z = l;
-	}
-	else
-	{
-		z = d;
-	}
-	while (g <= z)
-	{
-		if (s1[g] == s2[g])
+		if (s1[i] == '\0' && s2[i] == '\0')
+			break;
+		else if (s1[i] == '\0')
 		{
-			g++;
-			continue;
-		}
-		else
-		{
-			o = s1[g] - s2[g];
+			diff = s2[i];
 			break;
 		}
-		g++;
+		else if (s2[i] == '\0')
+		{
+			diff = s1[i];
+			break;
+		}
+		else if (s1[i] != s2[i])
+		{
+			diff = s1[i] - s2[i];
+			break;
+		}
+		else
+			i++;
+
 	}
+	return (diff);
 }
