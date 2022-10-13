@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_char -> Print a char
+ * print_all -> Print anything
  * @format: argument
  * Return: void
  */
@@ -27,20 +27,20 @@ void print_all(const char * const format, ...)
 			printf("%s%c", separator, va_arg(args, int));
 			break;
 			case 'i';
-			 printf("%s%d", separator, va_arg(args, int));
-			 break;
-			 case 'f';
-			 printf("%s%f", separator, va_arg(args, int));
-			 break;
-			 case 's';
-			 s = va_arg(args, char *);
-			 if (s == NULL)
-				 s = "(nil)";
-			 printf("%s%s", separator, s);
-			 break;
+			printf("%s%d", separator, va_arg(args, int));
+			break;
+			case 'f';
+			printf("%s%f", separator, va_arg(args, int));
+			break;
+			case 's';
+			s = va_arg(args, char *);
+			if (s == NULL)
+				s = "(nil)";
+			printf("%s%s", separator, s);
+			break;
 			default:
-			 i++;
-			 continue;
+			i++;
+			continue;
 		}
 		separator = ", ";
 		i++;
@@ -49,4 +49,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 	va_end(args);
 }
-
